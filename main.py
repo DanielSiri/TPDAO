@@ -201,25 +201,25 @@ def main():
     print("=" * 60)
     
     print(f"\n👨‍⚕️  Médico: {medico}")
-    print(f"   Especialidades: {[e.nombre for e in medico.especialidades]}")
-    print(f"   Turnos: {len(medico.turnos)}")
+    print(f"   Especialidades: {[e.get_nombre() for e in medico.get_especialidades()]}")
+    print(f"   Turnos: {len(medico.get_turnos())}")
     
     print(f"\n👤 Paciente: {paciente}")
-    print(f"   Turnos: {len(paciente.turnos)}")
-    print(f"   Historiales: {len(paciente.historiales)}")
+    print(f"   Turnos: {len(paciente.get_turnos())}")
+    print(f"   Historiales: {len(paciente.get_historiales())}")
     
     print(f"\n🏥 Consultorio: {consultorio}")
-    print(f"   Equipamiento: {consultorio.equipamiento}")
+    print(f"   Equipamiento: {consultorio.get_equipamiento()}")
     
     print(f"\n⏰ Turno: {turno}")
-    print(f"   Notificaciones: {len(turno.notificaciones)}")
-    print(f"   Cambios de estado: {len(turno.cambios_estado)}")
+    print(f"   Notificaciones: {len(turno.get_notificaciones())}")
+    print(f"   Cambios de estado: {len(turno.get_cambios_estado())}")
     
     print(f"\n💊 Laboratorio: {laboratorio}")
-    print(f"   Medicamentos: {[m.nombre for m in laboratorio.medicamentos]}")
+    print(f"   Medicamentos: {[m.get_nombre() for m in laboratorio.get_medicamentos()]}")
     
     print(f"\n📋 Receta: {receta}")
-    print(f"   Detalles: {[f'{d.medicamento.nombre}' for d in receta.detalles]}")
+    print(f"   Detalles: {[f'{d.get_medicamento().get_nombre()}' for d in receta.get_detalles()]}")
     
     print("\n" + "=" * 60)
     print("✅ Demostración completada")
